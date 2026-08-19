@@ -1,0 +1,79 @@
+---
+title: "Data Storage and Browser Persistence in Timeline Maker"
+sidebarTitle: "Data Storage"
+description: "How Timeline Maker stores all your timelines and avatars in browser localStorage, with steps to back up, restore, and transfer your data across devices."
+---
+
+Timeline Maker stores everything — timelines, milestones, risks, people, and avatar images — directly in your browser's localStorage. There is no account to create, no server to connect to, and no data ever leaves your device. This keeps the tool fast, private, and fully self-contained, but it also means that your data is tied to the specific browser profile you use. Understanding how that works helps you keep your timelines safe.
+
+## How data is saved
+
+Timeline Maker saves your data automatically every time you make a change. You do not need to press a save button, and there is no risk of losing work if you close a tab mid-edit — the most recent state is always written to localStorage immediately.
+
+Data persists across page refreshes and browser restarts as long as you do not clear your browser's site data or localStorage.
+
+<Note>
+All Timeline Maker data is stored under the localStorage key **`timeline-maker-state-v1`**. You can inspect or copy this value directly using your browser's developer tools (Application → Local Storage).
+</Note>
+
+## Device and profile isolation
+
+Each browser profile and each device maintains its own independent copy of your timelines. There is no sync mechanism — timelines you create on one device do not appear on another, and timelines in one browser profile are not visible in another profile on the same machine.
+
+If you need the same timeline in two places, you must transfer it manually (see the backup section below).
+
+## Avatar image storage
+
+When you upload a photo for a team member, Timeline Maker resizes the image and stores it as a data URI inside the same `timeline-maker-state-v1` localStorage entry. No image files are written to your disk or uploaded anywhere. Because avatars are embedded directly in the localStorage value, they are included automatically whenever you copy or restore that value.
+
+## The Reset sample button
+
+The **Reset sample** button in the control panel replaces the active timeline's milestones with a set of built-in sample data, and also adds any missing sample people to your shared People list. It affects only the currently selected timeline's milestones — all other timelines in the sidebar are left untouched. This is useful for exploring the app's features on a fresh example without losing your other work.
+
+<Warning>
+**Clearing your browser's site data permanently deletes all your timelines.** If you clear localStorage — either through your browser's "Clear site data" option or a privacy-cleaning tool — every timeline, milestone, risk, and person entry is gone with no way to recover them. Back up your data before clearing browser storage.
+</Warning>
+
+## Backing up and transferring data
+
+<Accordion title="How do I back up my timelines?">
+Because all data lives in localStorage, you can create a plain-text backup by copying the raw stored value:
+
+<Steps>
+  <Step title="Open browser developer tools">
+    Press **F12** (or **⌘ + Option + I** on macOS) to open the browser's developer tools panel.
+  </Step>
+  <Step title="Navigate to Local Storage">
+    Click the **Application** tab (Chrome/Edge) or **Storage** tab (Firefox), then expand **Local Storage** in the left-hand tree and select the Timeline Maker origin.
+  </Step>
+  <Step title="Copy the storage value">
+    Find the key **`timeline-maker-state-v1`**, click on its value field, select all the text (Ctrl+A / ⌘+A), and copy it.
+  </Step>
+  <Step title="Save the value somewhere safe">
+    Paste the copied text into a plain `.txt` or `.json` file and store it in a location you control — a local folder, a cloud drive, or a password manager's secure notes section.
+  </Step>
+</Steps>
+
+To restore from a backup, open the same **Application → Local Storage** panel, click the value for `timeline-maker-state-v1`, replace it with your saved text, and refresh the page. If the key no longer exists, create a new entry with exactly that key name and paste your backup as the value.
+</Accordion>
+
+<Accordion title="How do I move my timelines to a different browser or device?">
+Follow the backup steps above to copy the `timeline-maker-state-v1` value from your current browser. Then open the developer tools in the destination browser, navigate to **Application → Local Storage** for the Timeline Maker page, and paste the value into a new entry with the key `timeline-maker-state-v1`. Refresh the page and all your timelines will appear.
+</Accordion>
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Managing Timelines" icon="list" href="/guides/managing-timelines">
+    Create, rename, duplicate, and delete timelines from the sidebar.
+  </Card>
+  <Card title="Team Members" icon="users" href="/concepts/team-members">
+    Learn how people and their avatars are stored and shared across timelines.
+  </Card>
+  <Card title="Exporting" icon="download" href="/guides/exporting">
+    Download your timeline as an SVG or PNG to share outside the browser.
+  </Card>
+  <Card title="Introduction" icon="house" href="/introduction">
+    Overview of Timeline Maker and how it works without an account or install.
+  </Card>
+</CardGroup>

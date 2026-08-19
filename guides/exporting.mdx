@@ -1,0 +1,81 @@
+---
+title: "Download Your Timeline as SVG or PNG"
+sidebarTitle: "Exporting"
+description: "Export your timeline as a vector SVG or raster PNG. Exported files are clean and presentation-ready — no hover icons or editing controls."
+---
+
+When your timeline is ready to share, Timeline Maker can export it as a vector SVG or a raster PNG directly from your browser — no server required. Both formats render the full timeline cleanly: hover icons, edit controls, and delete buttons are all hidden in the export, giving you a polished, presentation-ready image. Both formats declare Inter as the preferred typeface; text renders in Inter on any system where that font is installed, and falls back gracefully to similar system fonts where it is not.
+
+## How to Export Your Timeline
+
+<Steps>
+  <Step title="Frame your timeline with the date range">
+    In the control panel, set the **start date** and **end date** of the timeline range to bracket exactly the period you want to show. The exported file renders everything within that range — milestones outside the range are clipped.
+  </Step>
+  <Step title="Confirm the current-date line (optional)">
+    If you want the current-date indicator line to appear in the export, make sure the toggle for it is enabled in the control panel. Disable it for a cleaner, date-neutral export.
+  </Step>
+  <Step title="Click Download SVG or Download PNG">
+    Both buttons are in the control panel. Click the format you need:
+    - **Download SVG** exports the timeline as a scalable vector file immediately.
+    - **Download PNG** first renders the SVG to a full-resolution canvas, then downloads the resulting image.
+  </Step>
+  <Step title="Save the file">
+    Your browser's standard file-save dialog opens. Choose a location and filename, then save. The file is ready to embed in a document, drop into a presentation, or open in a design tool.
+  </Step>
+</Steps>
+
+<Tip>
+  Set the timeline date range as tightly as possible around your milestones before exporting. A tighter range produces a more readable export with milestones spread across the full width, rather than clustered in a small section of a wide canvas.
+</Tip>
+
+## Choosing a Format
+
+<Tabs>
+  <Tab title="SVG">
+    SVG (Scalable Vector Graphics) is a vector format — it is defined mathematically rather than as a grid of pixels, so it scales to any size without any loss of sharpness or quality.
+
+    **Best for:**
+    - Importing into design tools such as Figma, Adobe Illustrator, or Inkscape for further editing
+    - Embedding in web pages or HTML reports where crisp rendering at any zoom level matters
+    - Presentations where you need to enlarge a slide or print at high resolution
+    - Archiving a timeline when you may want to edit the graphic later
+
+    **How it works:** Clicking `Download SVG` exports the current timeline view directly. The file is a standard `.svg` text file containing the vector paths, text, and font-family declarations.
+  </Tab>
+  <Tab title="PNG">
+    PNG (Portable Network Graphics) is a raster format — it stores the image as a fixed grid of pixels. The exported PNG is rendered at twice the timeline's natural canvas size (2× scale), so it is sharp and high resolution for typical use.
+
+    **Best for:**
+    - Embedding in Word documents, Google Docs, or PDF reports
+    - Pasting into emails or Slack messages
+    - Inserting into PowerPoint or Google Slides when SVG is not supported
+    - Sharing with stakeholders who need a simple image file they can open anywhere
+
+    **How it works:** Clicking `Download PNG` renders the SVG to an HTML canvas element at 2× scale first, then converts the canvas to a `.png` file for download. This extra step means the download may take a moment longer than SVG for very wide timelines.
+  </Tab>
+</Tabs>
+
+## Export Behaviour
+
+- **No editing UI** — Hover icons (edit pencils, delete buttons) are stripped from exports. The file shows only your timeline content.
+- **Full width render** — The exported file is as wide as the timeline's date range. Wider date ranges produce wider files.
+- **Font declaration** — Both formats declare Inter as the preferred typeface. Text renders in Inter where it is installed; systems without Inter use a similar sans-serif fallback.
+- **No account needed** — Exports happen entirely in your browser. Nothing is sent to a server.
+
+## What's Next
+
+<CardGroup cols={2}>
+  <Card title="Managing Timelines" icon="folder-open" href="/guides/managing-timelines">
+    Create, rename, duplicate, and delete timelines in the sidebar.
+  </Card>
+  <Card title="Editing Milestones" icon="pencil" href="/guides/editing-milestones">
+    Fine-tune milestone dates and details before you export.
+  </Card>
+  <Card title="Data Storage" icon="database" href="/reference/data-storage">
+    Learn how Timeline Maker stores your data in browser localStorage.
+  </Card>
+  <Card title="Milestone Statuses" icon="circle-half-stroke" href="/reference/milestone-statuses">
+    Review what each status colour means in the exported view.
+  </Card>
+</CardGroup>

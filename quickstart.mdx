@@ -1,47 +1,64 @@
 ---
-title: "Quickstart"
-description: "Begin with a guide on the fastest path to a successful outcome"
+title: "Timeline Maker Quickstart: Build a Timeline in Minutes"
+sidebarTitle: "Quickstart"
+description: "Create your first milestone timeline, assign owners, update statuses, reschedule by dragging, and export a clean PNG — all without installing anything."
 ---
 
-Describe how someone begins using your product. What is the first thing they need to do? Are there any prerequisites?
+This guide walks you through creating your first timeline from scratch, adding and editing milestones, and exporting a shareable image. You will go from a blank slate to a finished, exportable plan in just a few minutes.
 
-A quickstart should take someone from zero to using your product. They'll get a quick win and a sense of what they can accomplish.
-
-## Prerequisites
-
-Before you begin, you must have:
-
-- Requirement one (for example, Node.js 18+, a free account, an API key)
-- Requirement two (for example, a compatible device, a compatible browser, a compatible operating system)
-
-## Get started
+<Note>
+  Timeline Maker saves your work automatically as you go. All data is written to your browser's `localStorage` under the key `timeline-maker-state-v1` — no manual save step is ever required.
+</Note>
 
 <Steps>
-  <Step title="Install">
-    Describe how to install your product or sign up.
-
-    ```bash
-    npm install your-package
-    ```
+  <Step title="Open index.html in your browser">
+    Locate the `index.html` file and open it in any modern browser — Chrome, Firefox, Edge, and Safari all work. No web server or build step is needed. The app loads immediately with a default timeline ready to edit.
   </Step>
-  <Step title="Configure">
-    Describe any setup or configuration needed before first use.
 
-    ```bash
-    your-cli init
-    ```
+  <Step title="Rename the default timeline">
+    At the top of the page you will see the timeline name field. Click directly on the name, type your project title, and press **Enter** or click away to confirm. The new name is reflected instantly in the left sidebar and in all exports.
   </Step>
-  <Step title="Run it">
-    Show the first thing a user does to see it working.
 
-    ```bash
-    your-cli start
-    ```
+  <Step title="Add your first milestone">
+    In the control panel, click the **+ Add milestone** button. A new row appears at the bottom of the list editor below the timeline. The row is ready for input immediately.
+  </Step>
+
+  <Step title="Fill in the milestone details">
+    In the new list editor row, fill in the following columns:
+
+    - **Milestone** — type the name of your milestone (for example, *Kickoff Meeting*).
+    - **Date** — enter the target date. The marker appears on the SVG timeline as soon as you set a date within the visible range.
+    - **Owner** — select a person from the shared people list, or leave it blank for now.
+
+    Press **Tab** to move between columns or click any cell to edit it directly.
+  </Step>
+
+  <Step title="Change the milestone status">
+    In the **Status** column of the same row, click the current status badge. A dropdown lists all four options: **Planned**, **In Progress**, **Completed**, and **Overdue**. Select the one that matches your milestone. The marker color on the SVG timeline updates immediately to reflect the new status.
+  </Step>
+
+  <Step title="Add a second milestone directly on the timeline">
+    Move your cursor along the horizontal timeline axis. A **+** icon appears as you hover. Click at the position where you want the new milestone — Timeline Maker converts the click position into a date and creates a new milestone pre-filled with that date. Give it a title in the list editor row that appears.
+  </Step>
+
+  <Step title="Drag a milestone to reschedule it">
+    On the SVG timeline, click and hold any milestone marker, then drag it left or right along the axis. Release the marker at the new date to reschedule it. The date in the list editor updates automatically to match the dragged position.
+  </Step>
+
+  <Step title="Download your timeline as a PNG">
+    In the control panel, click **Download PNG**. Your browser saves a clean raster image of the timeline. All inline edit icons and controls are hidden in the export so the image is ready to drop straight into a presentation or report.
   </Step>
 </Steps>
 
 <Tip>
-  Give people a way to get help. This could be a link to a support page, a chat with a customer support agent, or a forum for your product.
-
-  Example: Need help? Reach out to us at [support@yourcompany.com](mailto:support@yourcompany.com).
+  If you want to start fresh at any point, use the **Reset sample** button in the control panel. This restores the built-in example timeline so you have a populated starting point to explore — without permanently losing other saved timelines in your sidebar.
 </Tip>
+
+## Next steps
+
+Now that you have a working timeline, explore these areas to get more out of Timeline Maker:
+
+- [Manage multiple timelines](/guides/managing-timelines) — create, duplicate, and organise timelines in the sidebar.
+- [Edit milestones in depth](/guides/editing-milestones) — inline title editing, the full list editor, and milestone signals.
+- [Track risks](/guides/tracking-risks) — attach risks to milestones, assign owners, and record updates.
+- [Export options](/guides/exporting) — download as SVG for vector editing or PNG for sharing.

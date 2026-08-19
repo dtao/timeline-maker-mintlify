@@ -1,0 +1,42 @@
+---
+title: "Timeline Maker: Browser-Based Milestone Planning Tool"
+sidebarTitle: "Introduction"
+description: "A lightweight browser-based milestone planner with no install or account. Open index.html to visualize milestones, track risks, and export as SVG or PNG."
+---
+
+Timeline Maker is a lightweight milestone planner that runs entirely in your browser. Open `index.html`, and you have a fully interactive timeline ready to use — no installation, no sign-up, and no data leaving your machine. Everything you create is stored locally in your browser, making it a fast, private tool for project managers, team leads, and anyone who needs to communicate a plan visually.
+
+## What you can do
+
+Timeline Maker gives you a complete planning workspace in a single HTML file. Here is what it covers:
+
+**Multiple timelines.** A collapsible left sidebar lets you create, duplicate, rename, and delete as many saved timelines as you need — each stored independently in your browser.
+
+**Interactive SVG visualization.** Your milestones render as a clean SVG timeline. Drag a marker to reschedule it, click a title to rename it inline, or hover over any milestone to reveal quick edit and delete controls.
+
+**Milestone management.** A list editor below the timeline gives you a structured view with columns for Milestone, Date, Owner, Status, Signal, and Actions. Milestones carry one of four statuses — Planned, In Progress, Completed, or Overdue — each with a distinct color so the state of your plan is visible at a glance.
+
+**Risk tracking.** Attach risks directly to milestones. Each risk has its own owner, description, and update history, and can be marked Open or Resolved so nothing slips through the cracks.
+
+**Shared people list.** Maintain a single roster of team members — with names, email addresses for Gravatar images, or uploaded avatar photos — and assign them as owners across milestones and risks.
+
+**SVG and PNG export.** Download your timeline as a vector SVG for editing or a clean PNG for sharing. Exported images strip all edit controls so what stakeholders see is exactly the plan.
+
+**Browser-local storage.** All data is saved automatically to `localStorage` under the key `timeline-maker-state-v1`. No account, no server, no sync — your data stays on your device.
+
+## Where to go next
+
+<CardGroup cols={2}>
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Build your first timeline and export it as a PNG in under five minutes.
+  </Card>
+  <Card title="Milestones" icon="flag" href="/concepts/milestones">
+    Learn how milestones work, what each status means, and how to edit them inline.
+  </Card>
+  <Card title="Risks" icon="triangle-exclamation" href="/concepts/risks">
+    Attach risks to milestones, assign owners, and track resolution over time.
+  </Card>
+  <Card title="Exporting" icon="arrow-down-to-line" href="/guides/exporting">
+    Download your timeline as a clean SVG or PNG ready for presentations and reports.
+  </Card>
+</CardGroup>

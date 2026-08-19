@@ -1,0 +1,101 @@
+---
+title: "Milestone Statuses: Visual Signals and Auto-Derive Logic"
+sidebarTitle: "Statuses"
+description: "Learn how Timeline Maker's four milestone statuses work, what they look like on the timeline and in the list editor, and how Overdue is auto-derived."
+---
+
+Every milestone in Timeline Maker carries one of four statuses: **Planned**, **In Progress**, **Completed**, or **Overdue**. Two of these — Planned and In Progress — are set manually, while Overdue is derived automatically from the milestone's date. Each status produces a distinct visual treatment in both the SVG timeline and the list editor, so you can read the health of your project at a glance without opening any individual milestone.
+
+## Summary metrics bar
+
+At the top of the app, a metrics bar gives you a live count across all milestones in the active timeline. The five counters update instantly whenever you add, edit, or delete a milestone.
+
+| Counter | What it counts |
+|---|---|
+| **Total** | All milestones in the current timeline |
+| **Complete** | Milestones with a Completed status |
+| **In Progress** | Milestones with an In Progress status |
+| **Overdue** | Milestones that are Planned with a past date |
+| **Planned** | Milestones that are Planned with a future date |
+
+## Status reference
+
+<Accordion title="Planned (Upcoming)">
+**Planned** is the default status assigned to every new milestone. Use it for work that has not yet started.
+
+**List editor appearance**
+- The status pill shows a **cyan border**.
+- The row has no special highlight or left-border accent.
+
+**Timeline appearance**
+- No signal icon is shown next to the milestone marker.
+
+**Automatic transition**
+When a Planned milestone's date passes the current date, Timeline Maker automatically reclassifies it as **Overdue**. No manual action is needed — and no manual action can prevent it while the date remains in the past.
+</Accordion>
+
+<Accordion title="In Progress">
+**In Progress** is set manually to indicate that work on a milestone is actively underway.
+
+**List editor appearance**
+- The status pill shows a **blue border**.
+- The entire row is highlighted in blue, with a **blue left-border accent**, making active milestones easy to spot as you scan the list.
+
+**Timeline appearance**
+- A **blue play icon (▶)** appears as the signal next to the milestone marker on the SVG timeline.
+</Accordion>
+
+<Accordion title="Completed">
+**Completed** is set manually once the milestone has been delivered or closed.
+
+**List editor appearance**
+- The status pill shows a **green border**.
+- The row is rendered at **reduced opacity**, visually de-emphasizing it so your eye stays on the milestones that still need attention.
+
+**Timeline appearance**
+- A **green check icon (✓)** appears as the signal next to the milestone marker.
+- The marker itself is visually dimmed alongside the list row.
+</Accordion>
+
+<Accordion title="Overdue">
+**Overdue** is applied automatically — you cannot set it manually. A milestone becomes Overdue when its status is Planned and its scheduled date is in the past relative to the current-date setting in the control panel.
+
+**List editor appearance**
+- The status pill shows a **thick amber border**.
+- The entire row is highlighted in amber, with an **amber left-border accent**, flagging it prominently as needing attention.
+
+**Timeline appearance**
+- An **amber warning icon (⚠)** appears as the signal next to the milestone marker.
+
+To clear an Overdue status, either move the milestone's date into the future or change its status to In Progress or Completed.
+</Accordion>
+
+<Note>
+**Overdue is automatic, not manual.** You cannot select "Overdue" from the status picker. Timeline Maker derives it in real time by comparing the milestone's date to the current date shown in the control panel. Adjusting the current-date input will immediately update which milestones appear as Overdue.
+</Note>
+
+## Quick-reference table
+
+| Status | Border color | Row highlight | Left-border accent | Timeline signal icon |
+|---|---|---|---|---|
+| Planned | Cyan | None | None | None |
+| In Progress | Blue | Blue | Blue | ▶ Play (blue) |
+| Completed | Green | Dimmed / reduced opacity | None | ✓ Check (green) |
+| Overdue | Amber (thick) | Amber | Amber | ⚠ Warning (amber) |
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Editing Milestones" icon="pencil" href="/guides/editing-milestones">
+    Learn how to change a milestone's status, date, owner, and title.
+  </Card>
+  <Card title="Tracking Risks" icon="triangle-exclamation" href="/guides/tracking-risks">
+    Attach Open or Resolved risks to any milestone to surface blockers.
+  </Card>
+  <Card title="Milestones concept" icon="flag" href="/concepts/milestones">
+    Understand what milestones are and how they appear on the timeline.
+  </Card>
+  <Card title="Keyboard Shortcuts" icon="keyboard" href="/reference/keyboard-shortcuts">
+    Mouse and keyboard interactions for working with milestones quickly.
+  </Card>
+</CardGroup>

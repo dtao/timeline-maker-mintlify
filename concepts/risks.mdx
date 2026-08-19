@@ -1,0 +1,79 @@
+---
+title: "Risks: Track Issues and Blockers Attached to Milestones"
+sidebarTitle: "Risks"
+description: "Risks are issues or concerns attached to individual milestones. Track open and mitigated risks, assign owners, and record timestamped update notes."
+---
+
+A risk is a concern, blocker, or uncertainty that you want to track against a specific milestone. Rather than maintaining a separate risk register, Timeline Maker lets you attach risks directly to the milestone they affect, keeping your context in one place. Each risk has a description, an optional owner, a status of Open or Mitigated, and a running history of timestamped update notes you add over time.
+
+## Risk Fields
+
+Every risk you add to a milestone contains the following information.
+
+<Accordion title="Description">
+  A short statement of the risk — what could go wrong, what is blocked, or what needs watching. This is the only required field when creating a risk.
+</Accordion>
+
+<Accordion title="Owner">
+  An optional person from the shared people list who is responsible for monitoring or resolving this risk. Assigning an owner makes accountability visible without leaving the timeline.
+</Accordion>
+
+<Accordion title="Status">
+  Either **Open** (amber) or **Mitigated** (green). New risks default to Open. Mark a risk as Mitigated once it has been addressed or is no longer a concern.
+</Accordion>
+
+<Accordion title="Update History">
+  A chronological log of notes you add to the risk over time. Each entry is automatically timestamped when you save it, giving you a lightweight audit trail of how the situation evolved.
+</Accordion>
+
+## Risk Indicators on the Timeline
+
+Timeline Maker surfaces risk information directly on the SVG axis so you can spot trouble without opening every milestone.
+
+<Note>
+  Each milestone marker displays a small colored dot that encodes the state of its attached risks at a glance:
+  - **Orange dot** — the milestone has one or more Open risks and no Mitigated risks.
+  - **Green dot** — the milestone has risks, and all of them are Mitigated.
+  - **Half-orange / half-green dot** — the milestone has a mix of Open and Mitigated risks.
+
+  No dot is shown if a milestone has no risks attached.
+</Note>
+
+## Managing Risks
+
+Risks are created and edited inside the milestone dialog. Open it by hovering over a milestone on the SVG axis and clicking the **edit** icon, or by clicking the edit action in the list editor.
+
+<Steps>
+  <Step title="Open the milestone dialog">
+    Hover over a milestone on the timeline and click the edit icon, or click the edit action in the list editor row for that milestone.
+  </Step>
+  <Step title="Add a new risk">
+    Inside the milestone dialog, locate the Risks section and click **Add Risk**. Enter a description, optionally assign an owner from the people list, and save.
+  </Step>
+  <Step title="Add an update note">
+    Click into an existing risk to expand it, then type a note in the update field and save. Timeline Maker appends the note with a timestamp to that risk's history.
+  </Step>
+  <Step title="Mitigate a risk">
+    Click **Mark mitigated** inside the expanded risk to change its status from Open to Mitigated. The indicator dot on the milestone marker updates immediately to reflect the new state. If you need to reopen a mitigated risk, click **Reopen**.
+  </Step>
+  <Step title="Review risk history">
+    Expand any risk in the milestone dialog to read the full chronological log of update notes. Use this to understand how a risk progressed from identification to mitigation.
+  </Step>
+</Steps>
+
+<Warning>
+  Deleting a milestone removes all risks and their update history attached to it. Export the timeline as an SVG or PNG before deleting if you need a permanent record.
+</Warning>
+
+## Multiple Risks per Milestone
+
+You can add as many risks as needed to a single milestone. Each risk is tracked independently — it has its own owner, status (Open or Mitigated), and update history. The indicator dot on the marker always reflects the combined state across all risks on that milestone.
+
+<CardGroup cols={2}>
+  <Card title="Tracking Risks Guide" icon="shield-halved" href="/guides/tracking-risks">
+    Practical steps for adding risks, logging updates, and moving risks to Mitigated across your timeline.
+  </Card>
+  <Card title="Milestones Concept" icon="flag" href="/concepts/milestones">
+    Understand how milestones work, including their statuses and visual representation on the SVG axis.
+  </Card>
+</CardGroup>

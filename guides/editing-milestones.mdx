@@ -1,0 +1,93 @@
+---
+title: "Add, Edit, and Reschedule Milestones"
+sidebarTitle: "Editing Milestones"
+description: "Add milestones from the control panel, list, or timeline axis. Edit titles, dates, owners, and statuses inline or via the full milestone dialog."
+---
+
+Milestones are the building blocks of every timeline. Timeline Maker gives you several ways to create and edit them — click directly on the visual timeline, use the list editor below the canvas, or open the full milestone dialog for complete control. All edits save automatically as you go.
+
+## Add a Milestone
+
+You can add a milestone in three ways depending on where your focus is:
+
+- **Control panel button** — Click `+ Add milestone` in the control panel above the timeline. A new milestone is created with a default date and added to the list.
+- **List footer button** — Click `+ Add milestone` at the bottom of the milestone list editor. Equivalent to the control panel button.
+- **Timeline axis click** — Hover over the solid axis line on the timeline visual. A small `+` icon appears at your cursor position. Click to add a milestone directly at that date.
+
+### Adding a Milestone from the Timeline Axis
+
+<Steps>
+  <Step title="Hover over the axis line">
+    Move your cursor onto the solid horizontal axis line in the timeline canvas. As you move along the axis, a small `+` icon tracks your cursor position.
+  </Step>
+  <Step title="Position your cursor at the target date">
+    Slide the cursor left or right until the `+` sits over the date you want. The axis labels help you orient to the correct position.
+  </Step>
+  <Step title="Click to create the milestone">
+    Click the `+` icon. A new milestone is created at that date and appears immediately on the timeline and in the list editor below.
+  </Step>
+  <Step title="Edit the milestone details">
+    Click the milestone title on the timeline to rename it, or click the pencil icon to open the full dialog and fill in the owner, status, and any risks.
+  </Step>
+</Steps>
+
+## Edit a Milestone
+
+### Inline Editing on the Timeline
+
+You can edit the most common fields directly on the timeline visual without opening any dialog:
+
+- **Title** — Click the milestone title text on the timeline. It becomes an editable text field. Type the new name and press Enter or click away to confirm.
+- **Status** — Click the status signal icon on the milestone marker to cycle through available statuses.
+- **Owner** — Click the owner avatar on the milestone marker to open the owner picker and select a person from your people list.
+
+### Full Edit Dialog
+
+For access to all fields — including date, owner, status, and risks — open the full milestone dialog:
+
+- Hover over a milestone on the timeline and click the **pencil icon** that appears.
+- Or click the **pencil icon** in the corresponding row of the list editor.
+
+The dialog shows every field for that milestone and includes the Risks section at the bottom.
+
+<Tip>
+  To quickly reschedule a milestone without opening any dialog, drag it directly on the timeline axis. Click and hold the milestone marker, then drag left or right to move it to a new date. Release to confirm. The date in the list editor updates instantly.
+</Tip>
+
+## Delete a Milestone
+
+- **From the timeline** — Hover over a milestone marker on the canvas. A delete icon appears alongside the edit pencil. Click the delete icon to remove the milestone.
+- **From the list editor** — Click the delete button in the Actions column of the milestone's row.
+
+Both methods remove the milestone and all its associated risks permanently.
+
+## Sort Milestones by Date
+
+Click `Sort by date` in the list editor header to reorder all milestones chronologically. This affects only the display order in the list — the visual timeline always renders milestones at their correct date positions on the axis regardless of list order.
+
+## Reset to Sample Data
+
+Click `Reset sample` in the control panel to replace the current timeline's milestones with a fresh set of example milestones. This is useful when you want to start from a clean worked example rather than a blank slate. All existing milestones on the active timeline are replaced — the action cannot be undone, so duplicate the timeline first if you want to keep the current data.
+
+## Specify Times Mode
+
+<Note>
+  Enable **Specify times** in the control panel to add time-of-day fields to every date input throughout the app — including the milestone dialog, the list editor, and the date range controls. This is useful when multiple milestones fall on the same day and you need finer ordering. When the toggle is off, all times are hidden and dates are treated as day-level precision.
+</Note>
+
+## What's Next
+
+<CardGroup cols={2}>
+  <Card title="Milestone Statuses" icon="circle-half-stroke" href="/reference/milestone-statuses">
+    See the full list of status values and what each colour signals.
+  </Card>
+  <Card title="Tracking Risks" icon="triangle-exclamation" href="/guides/tracking-risks">
+    Attach risks to a milestone and track their resolution over time.
+  </Card>
+  <Card title="Team Members" icon="users" href="/concepts/team-members">
+    Learn how the shared people list works for owners and risk assignees.
+  </Card>
+  <Card title="Exporting" icon="download" href="/guides/exporting">
+    Export a clean, icon-free version of your timeline as SVG or PNG.
+  </Card>
+</CardGroup>

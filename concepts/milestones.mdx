@@ -1,0 +1,97 @@
+---
+title: "Milestones: Dates, Owners, Statuses, and Visual Signals"
+sidebarTitle: "Milestones"
+description: "A milestone is a named event with a date, owner, and status. Learn how milestones are represented on the timeline and how to interact with them."
+---
+
+A milestone is the core unit of work in Timeline Maker. It represents a named event — a deadline, a release, a decision point — anchored to a specific date. Each milestone carries an owner drawn from the shared people list, a status that reflects its current state, and an optional details field for longer notes. Milestones appear both on the interactive SVG timeline axis and in the list editor below it, giving you two ways to read and update your plan.
+
+## Milestone Fields
+
+Each milestone has five fields. Some are editable directly on the SVG axis or in the list editor; others are only accessible from the milestone dialog.
+
+<Accordion title="Title">
+  The display name of the milestone. It appears as a label on the SVG axis and in the Milestone column of the list editor. Edit it inline on the axis by clicking the label, update it in the list editor's title input, or change it inside the milestone dialog.
+</Accordion>
+
+<Accordion title="Date">
+  The date — and optionally the time — the milestone is scheduled to occur. The date positions the milestone marker on the SVG axis. Drag the marker left or right on the axis to reschedule it, or type a new value in the Date column of the list editor. Enable **time mode** in the control panel if you need sub-day precision.
+</Accordion>
+
+<Accordion title="Owner">
+  A person selected from the shared people list for this timeline. The owner's avatar or initials appear alongside the milestone marker on the axis and in the Owner column of the list editor. Assign or change the owner in the list editor or inside the milestone dialog.
+</Accordion>
+
+<Accordion title="Status">
+  One of four states — Planned, In Progress, Completed, or Overdue — that communicates the current state of the milestone. Change the status using the Status dropdown in the list editor, or click the status marker icon on the SVG axis to open the status menu. See [Milestone Statuses](/reference/milestone-statuses) for the full color and behavior reference.
+</Accordion>
+
+<Accordion title="Details">
+  A free-text field for notes, context, or acceptance criteria. Available only inside the milestone dialog — open it by clicking the edit icon that appears when you hover over a milestone on the axis, or by clicking the edit button in the list editor. Details keep the timeline view clean while keeping supporting information a click away.
+</Accordion>
+
+## Milestone Statuses
+
+Timeline Maker uses four statuses, each with a distinct color signal to make the state of your plan scannable at a glance.
+
+<Tabs>
+  <Tab title="Planned">
+    Shown in **cyan**. The milestone is scheduled but work has not started. This is the default status for any new milestone.
+  </Tab>
+  <Tab title="In Progress">
+    Shown in **blue**. Work on this milestone is actively underway.
+  </Tab>
+  <Tab title="Completed">
+    Shown in **green** with a dimmed appearance. The milestone has been reached and is considered done.
+  </Tab>
+  <Tab title="Overdue">
+    Shown in **amber**. Timeline Maker automatically treats a milestone as Overdue when its date is in the past and its status is still Planned. Update the status to In Progress or Completed to clear the overdue signal.
+  </Tab>
+</Tabs>
+
+For the full reference including signal icons, see [Milestone Statuses](/reference/milestone-statuses).
+
+## Visual Representation on the SVG Axis
+
+Each milestone is rendered on the SVG timeline axis as a set of layered visual elements.
+
+- **Marker dot** — a colored circle positioned at the milestone's date on the horizontal axis. The color matches the milestone's status.
+- **Label** — the milestone title, displayed above or below the marker. When milestones are close together, labels automatically stack into non-overlapping rows so nothing is hidden.
+- **Owner avatar** — the owner's photo, Gravatar, or initial badge rendered near the label.
+- **Status signal icon** — a small icon that reinforces the status at a glance without relying on color alone.
+- **Risk dot** — if the milestone has risks attached, a small colored dot appears on the marker. See [Risks](/concepts/risks) for details.
+
+## Interacting with Milestones
+
+You can edit milestones directly from the timeline view or from the list editor below the axis.
+
+<Tabs>
+  <Tab title="Timeline View">
+    <Steps>
+      <Step title="Edit the title inline">
+        Click the milestone label on the SVG axis. The label becomes an editable text field. Type the new title and press **Enter** or click elsewhere to save.
+      </Step>
+      <Step title="Drag to reschedule">
+        Click and drag the milestone marker left or right along the axis to move it to a new date. Release to confirm.
+      </Step>
+      <Step title="Open the full dialog">
+        Hover over a milestone to reveal the **edit** and **delete** icons. Click the edit icon to open the milestone dialog where you can update all fields, including details and risks.
+      </Step>
+      <Step title="Delete a milestone">
+        Hover over the milestone and click the **delete** icon that appears. Confirm the deletion when prompted.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="List Editor">
+    The list editor below the timeline displays all milestones in a table with columns for **Milestone**, **Date**, **Owner**, **Status**, **Signal**, and **Actions**. Click any cell or the edit action to update a milestone, or use the delete action to remove it. Changes in the list editor are reflected on the SVG axis immediately.
+  </Tab>
+</Tabs>
+
+<CardGroup cols={2}>
+  <Card title="Editing Milestones" icon="pencil" href="/guides/editing-milestones">
+    Step-by-step instructions for creating, updating, reordering, and deleting milestones.
+  </Card>
+  <Card title="Tracking Risks" icon="triangle-exclamation" href="/guides/tracking-risks">
+    Learn how to attach risks to a milestone and manage them over time.
+  </Card>
+</CardGroup>

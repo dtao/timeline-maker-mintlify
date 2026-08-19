@@ -1,0 +1,76 @@
+---
+title: "Team Members: Managing Owners and Avatars on Timelines"
+sidebarTitle: "Team Members"
+description: "The people list is a shared roster of team members within a timeline. Assign owners to milestones and display avatars directly on the SVG axis."
+---
+
+Every timeline in Timeline Maker includes a shared people list — a roster of team members you can assign as owners to individual milestones. Adding people to the list once makes them available throughout the timeline, so you never have to type the same name twice. Each person can have a name, an email address for automatic Gravatar lookup, or an uploaded avatar photo, giving you flexible options for personalizing how owners appear on the timeline axis.
+
+## Person Fields
+
+When you add or edit a person in the people list, you can provide the following information.
+
+<Accordion title="Name (required)">
+  The person's display name. It appears in the owner picker when assigning a milestone, in the Owner column of the list editor, and as a fallback initial badge on the SVG axis if no photo or Gravatar is available.
+</Accordion>
+
+<Accordion title="Email (optional)">
+  An email address associated with the person's Gravatar account. When an email is provided and no photo has been uploaded, Timeline Maker automatically fetches the Gravatar image linked to that address and uses it as the person's avatar everywhere in the timeline.
+</Accordion>
+
+<Accordion title="Avatar Photo (optional)">
+  A photo you upload directly from your device. Uploaded images are resized and stored in browser localStorage alongside the rest of the timeline data. An uploaded photo takes precedence over a Gravatar image when both are available.
+</Accordion>
+
+<Tip>
+  If you provide an email address linked to a Gravatar account, the avatar loads automatically — no upload needed. Visit [gravatar.com](https://gravatar.com) to create a Gravatar profile or associate a photo with your email address.
+</Tip>
+
+## How Avatars Are Displayed
+
+Timeline Maker resolves each person's avatar using a simple priority order.
+
+<Steps>
+  <Step title="Uploaded photo">
+    If you have uploaded a photo for the person, that image is used everywhere their avatar appears — on milestone markers, in the owner picker, and in the list editor.
+  </Step>
+  <Step title="Gravatar">
+    If no photo is uploaded but an email address is provided, Timeline Maker fetches the Gravatar image linked to that email. The image is displayed in the same places as an uploaded photo.
+  </Step>
+  <Step title="Initials badge">
+    If neither a photo nor a Gravatar is available, Timeline Maker generates a circular badge using the person's initials on a color-coded background. The color is consistent for each person so they remain easy to identify at a glance.
+  </Step>
+</Steps>
+
+## Adding People to the List
+
+You add people to the shared people list through the owner picker — the dropdown that appears when you assign an owner to a milestone.
+
+<Steps>
+  <Step title="Open the owner picker">
+    Create or edit a milestone to open the milestone dialog. Click the **Owner** field to open the owner picker menu.
+  </Step>
+  <Step title="Create a new person">
+    If the person you want does not yet appear in the list, use the **Add Person** option in the picker. Enter their name and, optionally, their email address or upload a photo.
+  </Step>
+  <Step title="Assign the owner">
+    Select the person's name from the picker to assign them as the owner of the current milestone. Their avatar appears on the milestone marker immediately.
+  </Step>
+</Steps>
+
+<Note>
+  The people list is shared across all milestones within a single timeline. People are not shared between separate timelines — each timeline maintains its own independent roster.
+</Note>
+
+## Storage of Avatar Images
+
+Uploaded avatar photos are resized before storage to keep your localStorage footprint manageable. Along with all other timeline data, avatars are saved under the key `timeline-maker-state-v1` in your browser's localStorage. Because localStorage is local to each browser and device, uploaded photos do not automatically appear on other devices.
+
+<CardGroup cols={2}>
+  <Card title="Editing Milestones" icon="pencil" href="/guides/editing-milestones">
+    Learn how to assign owners and update all other milestone fields from the timeline view and list editor.
+  </Card>
+  <Card title="Data Storage Reference" icon="database" href="/reference/data-storage">
+    Understand what is stored in localStorage, how to back up your data, and what happens when site data is cleared.
+  </Card>
+</CardGroup>

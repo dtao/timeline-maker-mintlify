@@ -1,0 +1,92 @@
+---
+title: "Track and Resolve Risks on Milestones"
+sidebarTitle: "Tracking Risks"
+description: "Attach risks to any milestone, assign owners, record progress updates, and mark risks mitigated or reopen them — all from within the milestone dialog."
+---
+
+Every milestone can carry one or more risks that you want to monitor. Risks have their own owners, status (Open or Mitigated), and a running update history so your team always has a clear audit trail. Risk indicators appear directly on the timeline canvas, making it easy to spot trouble spots at a glance without opening any dialog.
+
+## Understanding Risk Indicators on the Timeline
+
+Risk dots appear on the milestone marker in the timeline canvas to summarise the risk state of that milestone at a glance.
+
+<Note>
+  The dot colour reflects the overall risk state of the milestone: an **orange dot** means at least one risk is still Open; a **green dot** means all risks are Mitigated; a **half-orange, half-green dot** indicates a mix of Open and Mitigated risks. No dot means no risks have been added.
+</Note>
+
+## Add and Resolve a Risk
+
+<Steps>
+  <Step title="Open the milestone dialog">
+    Hover over the milestone on the timeline and click the **pencil icon**, or click the pencil icon in the milestone's row in the list editor. The full milestone dialog opens.
+  </Step>
+  <Step title="Scroll to the Risks section">
+    The Risks section is at the bottom of the milestone dialog. It shows all existing risks for this milestone and an `+ Add risk` button.
+  </Step>
+  <Step title="Click + Add risk">
+    Click `+ Add risk`. A new risk row appears with an empty description field and an Open status.
+  </Step>
+  <Step title="Enter a description">
+    Type a description of the risk in the description field — be specific enough that anyone reading it understands what the concern is.
+  </Step>
+  <Step title="Assign an owner">
+    Select an owner for the risk from your shared people list using the owner picker on the risk row. The owner is the person responsible for monitoring or mitigating this risk.
+  </Step>
+  <Step title="Expand the detail panel and add updates">
+    Click the **Updates** button on the risk row to open its detail panel. Use the text field and `Add update` button to record a timestamped note — for example, a mitigation action taken or a status change. Update history accumulates in the panel for a full audit trail.
+  </Step>
+  <Step title="Mark the risk mitigated">
+    When the risk is no longer a concern, expand the detail panel, enter a mitigation note in the text field, and click **Mark mitigated**. The status pill on the risk row updates to Mitigated (green) and the timeline dot for the milestone reflects the change.
+  </Step>
+</Steps>
+
+## Managing Existing Risks
+
+### Editing a Risk
+
+Click the **Updates** button on a risk row to open its detail panel. From there you can:
+
+- Edit the risk description in the description field
+- Change the assigned owner using the owner selector
+- Add a new update note with the `Add update` button
+
+Each update note is saved with a timestamp, giving you a chronological history of how the risk evolved.
+
+### Reopening a Mitigated Risk
+
+If a previously mitigated risk resurfaces, open its detail panel and click **Reopen**. The risk status returns to Open (amber) and the timeline dot updates accordingly.
+
+### Deleting a Risk
+
+Click the **×** button on the right side of the risk row. The risk and all its update history are removed permanently.
+
+<Warning>
+  Deleting a risk is permanent. All update history associated with that risk is also deleted. If you want to keep a record, add a final update note before deleting, or export the timeline first.
+</Warning>
+
+## Frequently Asked Questions
+
+<Accordion title="Can I assign a risk to someone not in my people list?">
+  No. Risk owners must come from the shared people list. If the person you want to assign is not listed, go to the people list and add them as a team member first — enter their name, email, or upload an avatar photo. Once they appear in the people list, you can assign them as a risk owner.
+</Accordion>
+
+<Accordion title="Why won't the risk mark as mitigated?">
+  Marking a risk as mitigated requires a non-empty mitigation note. Enter a description in the text field inside the detail panel before clicking **Mark mitigated**. If the field is empty, the app focuses the input to prompt you to fill it in.
+</Accordion>
+
+## What's Next
+
+<CardGroup cols={2}>
+  <Card title="Team Members" icon="users" href="/concepts/team-members">
+    Add and manage the people list used for risk owners and milestone owners.
+  </Card>
+  <Card title="Risks Concept" icon="triangle-exclamation" href="/concepts/risks">
+    Understand how risks relate to milestones and what Open vs Mitigated means.
+  </Card>
+  <Card title="Editing Milestones" icon="pencil" href="/guides/editing-milestones">
+    Learn all the ways to add, edit, and reschedule milestones.
+  </Card>
+  <Card title="Exporting" icon="download" href="/guides/exporting">
+    Export a clean view of your timeline with risk indicators included.
+  </Card>
+</CardGroup>

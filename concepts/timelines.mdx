@@ -1,0 +1,65 @@
+---
+title: "Timelines: Creating and Managing Your Milestone Plans"
+sidebarTitle: "Timelines"
+description: "A timeline is a named container for your milestones and people list. Create, switch, and manage multiple timelines from the collapsible left sidebar."
+---
+
+A timeline is the top-level container in Timeline Maker. It holds a complete set of milestones, a shared people list, and its own configuration — including date range and current-date setting. You can maintain as many timelines as you need, each representing a separate project, workstream, or planning horizon, and switch between them instantly from the sidebar.
+
+## The Timeline Sidebar
+
+The collapsible left sidebar is your home for navigating between timelines. It displays the total count of saved timelines and lists each one by name. Click any timeline in the list to load it into the main view. Collapse the sidebar to give the canvas more room when you are focused on a single timeline.
+
+<Info>
+  Each browser and device stores its own independent copy of your timelines. Timeline Maker saves data to browser localStorage, so timelines do not sync across devices or browsers automatically. If you need to move a timeline, use the SVG or PNG export as a portable snapshot.
+</Info>
+
+## What Each Timeline Contains
+
+Every timeline you create is self-contained. Its configuration and data are stored together and do not affect any other timeline.
+
+<CardGroup cols={2}>
+  <Card title="Milestones" icon="flag" href="/concepts/milestones">
+    A list of named events, each with a date, owner, status, and optional details. Milestones are displayed on the SVG axis and in the list editor below.
+  </Card>
+  <Card title="People List" icon="users" href="/concepts/team-members">
+    A shared roster of team members available as owners when creating or editing milestones within this timeline.
+  </Card>
+  <Card title="Date Range" icon="calendar" href="/guides/managing-timelines">
+    The start and end dates that define the visible span of the SVG timeline axis. Adjust these from the control panel.
+  </Card>
+  <Card title="Current-Date Setting" icon="clock" href="/guides/managing-timelines">
+    An optional marker line that highlights today's position on the axis. You can set it to any date and toggle its visibility.
+  </Card>
+</CardGroup>
+
+## Managing Your Timelines
+
+You can perform four operations on any timeline using the sidebar buttons and the name input in the app header.
+
+<Steps>
+  <Step title="Create a new timeline">
+    Click the **+ New** button at the bottom of the sidebar. Timeline Maker creates a blank timeline with a default name and opens it immediately.
+  </Step>
+  <Step title="Rename a timeline">
+    Select the timeline you want to rename by clicking it in the sidebar, then edit its name directly in the timeline name input at the top of the app. Changes save automatically as you type.
+  </Step>
+  <Step title="Duplicate a timeline">
+    Select the timeline you want to copy, then click **Duplicate** in the sidebar. Timeline Maker creates an identical copy — milestones, people, and settings included — and opens it immediately with a modified name.
+  </Step>
+  <Step title="Delete a timeline">
+    Select the timeline you want to remove, then click **Delete** in the sidebar. This permanently removes the timeline and all its data. There is no undo, so export a snapshot first if you need a record.
+  </Step>
+</Steps>
+
+<Warning>
+  Deleting a timeline removes it from localStorage immediately and permanently. There is no recycle bin or undo. Export a PNG or SVG snapshot first if you want to keep a record.
+</Warning>
+
+## Data Persistence
+
+Timeline Maker stores all timeline data in your browser's localStorage under the key `timeline-maker-state-v1`. No account, server, or internet connection is required. Data persists across page refreshes and browser restarts as long as you do not clear site data for the page.
+
+<Tip>
+  If you use multiple browsers or work across devices, keep your timelines in sync by periodically exporting SVG snapshots. See the [Exporting guide](/guides/exporting) for details.
+</Tip>

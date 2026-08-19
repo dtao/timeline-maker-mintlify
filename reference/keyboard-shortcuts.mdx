@@ -1,0 +1,46 @@
+---
+title: "Timeline Maker Keyboard and Mouse Interaction Guide"
+sidebarTitle: "Shortcuts"
+description: "Reference for all keyboard and mouse interactions in Timeline Maker, including drag-to-reschedule, inline title editing, and the status and owner pickers."
+---
+
+Timeline Maker is primarily a mouse- and touch-driven tool. Most actions — scheduling milestones, changing owners, picking statuses — happen through clicks, hovers, and drags directly on the interactive SVG timeline or in the list editor below it. Keyboard input is used for text entry and for confirming or cancelling inline edits. The table below covers every interaction available in the app.
+
+<Note>
+Timeline Maker has no global keyboard shortcuts for navigation or commands (such as ⌘S to save). All data is saved automatically on every change — no save shortcut is needed.
+</Note>
+
+## Interactions reference
+
+| Action | How to trigger | Notes |
+|---|---|---|
+| **Confirm inline title edit** | Press **Enter** | Commits the text you typed as the new milestone title and exits edit mode. |
+| **Cancel inline title edit** | Press **Escape** | Discards your changes and restores the original title. |
+| **Close an open dialog** | Press **Escape** | Closes the milestone or person dialog using the browser's native dialog-close behavior. The status picker and owner picker menus close when you click outside them, not via keyboard. |
+| **Activate inline title edit** | **Click** a milestone title on the timeline | The title becomes an editable text field directly on the SVG. Press Enter to confirm or Escape to cancel. |
+| **Reschedule a milestone** | **Click and drag** a milestone marker on the timeline | Drag left or right to move the milestone to a new date. The date updates in real time as you drag. |
+| **Open the status picker** | **Click** the signal icon next to a milestone on the timeline | Displays a menu listing the manually selectable statuses: Planned, In Progress, and Completed. |
+| **Open the owner picker** | **Click** the owner avatar next to a milestone on the timeline | Displays a list of people from your shared People list to assign as the milestone owner. |
+| **Reveal edit and delete icons** | **Hover** over a milestone on the timeline | Shows a pencil (edit) icon and an × (delete) icon. Move the cursor away to hide them again. |
+| **Add a milestone at a specific date** | **Click** the axis hit-target (**+**) on the timeline axis | Places a new milestone at the date position you clicked. You can rename and configure it immediately. |
+
+## Mouse interactions on the list editor
+
+The list editor below the timeline is form-based. You interact with it by clicking fields in the **Milestone**, **Date**, **Owner**, **Status**, **Signal**, and **Actions** columns. There are no dedicated keyboard shortcuts for the list editor beyond standard text-field behavior (Tab to move between fields, Enter to confirm).
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Editing Milestones" icon="pencil" href="/guides/editing-milestones">
+    Step-by-step guide to updating milestone titles, dates, owners, and statuses.
+  </Card>
+  <Card title="Milestone Statuses" icon="circle-half-stroke" href="/reference/milestone-statuses">
+    Visual reference for all four statuses and their icons, colors, and row styles.
+  </Card>
+  <Card title="Managing Timelines" icon="list" href="/guides/managing-timelines">
+    Create, rename, duplicate, and delete timelines from the sidebar.
+  </Card>
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Build your first timeline in under five minutes.
+  </Card>
+</CardGroup>
