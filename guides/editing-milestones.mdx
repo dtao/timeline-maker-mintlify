@@ -54,6 +54,36 @@ The dialog shows every field for that milestone and includes the Risks section a
   To quickly reschedule a milestone without opening any dialog, drag it directly on the timeline axis. Click and hold the milestone marker, then drag left or right to move it to a new date. Release to confirm. The date in the list editor updates instantly.
 </Tip>
 
+## Update the Status with a Comment
+
+The milestone dialog includes a **Milestone history** section for changing status and leaving an optional note explaining the change.
+
+<Steps>
+  <Step title="Open the milestone dialog">
+    Hover a milestone on the timeline and click the pencil icon, or click the pencil in the list editor row.
+  </Step>
+  <Step title="Pick a new status">
+    Choose Planned, In Progress, or Completed from the **Status** dropdown in the Milestone history section. Overdue is derived automatically and is not selectable — see [Milestone Statuses](/reference/milestone-statuses).
+  </Step>
+  <Step title="Add an optional comment">
+    Type a short note in the **Comment** field, such as "kicked off after design review" or "shipped in v2.1". Leave it blank if you have nothing to add.
+  </Step>
+  <Step title="Save the change">
+    Click **Update status**. Timeline Maker records the transition, timestamp, and comment as a new entry in the history list below the form.
+  </Step>
+</Steps>
+
+## Review and Manage Milestone History
+
+Every due date change and status change is written to the milestone's history automatically. The history list appears at the bottom of the milestone dialog, newest first.
+
+- **Date changes** show the previous date, an arrow to the new date, and the timestamp. Dragging a milestone marker on the axis also creates a date history entry.
+- **Status changes** show the previous status, an arrow to the new status, the milestone's due date at the time of the change, and the timestamp.
+- Any comment you attached appears below the entry.
+- Click the **×** button on a history entry to remove that single entry. Other entries are unaffected.
+
+Hover a milestone on the timeline axis to see date-change and completion markers drawn from its history. For a full explanation of what history captures and how it renders, see [Milestone history](/concepts/milestones#milestone-history).
+
 ## Delete a Milestone
 
 - **From the timeline** — Hover over a milestone marker on the canvas. A delete icon appears alongside the edit pencil. Click the delete icon to remove the milestone.
