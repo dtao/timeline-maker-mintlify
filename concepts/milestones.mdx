@@ -61,6 +61,24 @@ Each milestone is rendered on the SVG timeline axis as a set of layered visual e
 - **Status signal icon** — a small icon that reinforces the status at a glance without relying on color alone.
 - **Risk dot** — if the milestone has risks attached, a small colored dot appears on the marker. See [Risks](/concepts/risks) for details.
 
+## Milestone history
+
+Every date change and status change on a milestone is recorded automatically in that milestone's history. History appears in the **Milestone history** panel inside the milestone dialog and, for date changes and completions, as amber hover markers on the timeline axis. Use history to see when a due date slipped, when work started or finished, and any notes you added to explain the change.
+
+Each history entry captures:
+
+- The type of change (due date moved, or status transition such as Planned → In Progress).
+- The previous and new values.
+- The timestamp of the change, drawn from your local timezone.
+- An optional comment you type when updating status, or when confirming a date drag on the axis.
+
+Hovering a milestone marker on the SVG axis reveals two overlay signals drawn from history:
+
+- **Previous due date** — an outlined orange circle at the original date, connected by a dashed line to a **moved** diamond at the new date. One pair appears for each recorded date change.
+- **Completed** — a green marker at the date the milestone was completed, when its history includes a Completed transition.
+
+History entries are removable individually from the panel. Deleting a timeline or milestone deletes its history along with it.
+
 ## Interacting with Milestones
 
 You can edit milestones directly from the timeline view or from the list editor below the axis.
